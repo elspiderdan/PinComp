@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "_PinLayout";
+}
+<div class="form-container">
+    <form id="form">
+        <div class="input-container">
+            <input type="text" id="email" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" required />
+            <label for="email" >Correo Electrónico</label>
+        </div>
+
+        <div class="input-container">
+            <input type="password" id="password" aria-describedby="requirements" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" required />
+            <label for="password">PIN</label>
+            <button class="show-password" id="show-password" type="button" role="switch" aria-label="Show password" aria-checked="false">Show</button>
+        </div>
+
+        <div id="requirements" class="password-requirements">
+            <p class="requirement" id="length">6 Números</p>
+            <p class="requirement" id="lowercase">Sin números consecutivos (ej. 123, 987...).</p>
+            <p class="requirement" id="uppercase">Sin números repetidos (ej. 111, 999...).</p>
+        </div>
+
+        <div class="input-container">
+            <input type="password" id="confirm-password" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" required />
+            <label for="confirm-password">Confirme PIN</label>
+        </div>
+
+        <div class="password-requirements">
+            <p class="requirement hidden error" id="validEmail">Correo inválido</p>
+            <p class="requirement hidden error" id="match">PINs deben de ser iguales</p>
+        </div>
+
+        <div id="msgAlert" class="notifications-container">
+            <div class="error-alert-fullwidth">
+                <div class="flex">
+                    <div class="error-prompt-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="submit-container">
+            <input type="submit" id="submit" disabled />
+        </div>
+    </form>    
+</div>
+
+<link rel="stylesheet" href="~/css/createPin.css" asp-append-version="true" />
+<script src="~/js/createpin.js" asp-append-version="true"></script>

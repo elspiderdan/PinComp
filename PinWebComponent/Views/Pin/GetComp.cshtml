@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "_PinLayout";
+}
+<div class="password">
+    <input id="pin1" maxlength="1" class="input" name="text" type="number" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" />
+    <input id="pin2" maxlength="1" class="input" name="text" type="number" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" />
+    <input id="pin3" maxlength="1" class="input" name="text" type="number" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" />
+    <input id="pin4" maxlength="1" class="input" name="text" type="number" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" />
+    <input id="pin5" maxlength="1" class="input" name="text" type="number" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" />
+    <input id="pin6" maxlength="1" class="input" name="text" type="number" oncopy="return false;" onpaste="return false;" ondrop="return false;" autocomplete="off" />
+</div>
+
+<div class="flex-center">Ingresa los 6 dígitos de tu PIN</div>
+
+<div id="msgAlert" class="notifications-container">
+    <div class="error-alert">
+        <div class="flex">
+            <div class="error-prompt-container">
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="userBanned" value="false" />
+
+<link rel="stylesheet" href="~/css/getPin.css" asp-append-version="true" />
+<script src="~/js/pinIn.js" asp-append-version="true"></script>
